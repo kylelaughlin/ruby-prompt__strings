@@ -6,7 +6,29 @@ instructor_notes: Feel free to re-organize the headings (or add/remove headings)
 # What is a String?
 
 A string is a series of characters treated as one unit. A string can include letters, digits, spaces, special characters, 
-and punctuation and are typically enclosed in double or single quotes depending on the syntax of the language being used.
+and punctuation and are typically enclosed in double or single quotes depending on the syntax of the language being used. 
+In ruby, single or double quotes can be used with strings. Single quotes work when working with a simple string but as soon 
+as you introduce special keywords, such as \n, or string interpolation, like #{something}, single quote strings do not work 
+as intended. Double quotes must be used when creating strings that use special keywords and string interpolation.
+
+puts 'Hello\nWorld' results in: 
+    Hello\nWorld
+    
+puts "Hello\nWorld" results in:
+    Hello
+    World
+    
+name = "Kyle"
+puts 'Hello there, #{name}' results in:
+    Hello there, #{name}
+    
+puts "Hello there, #{name}" results in:
+    Hello there, Kyle
+    
+In my research it appears that there are differing opinions on how and when single and double quotes should be used. In one corner 
+some say just to use double quotes for everything while the other corner says to use single quotes for everything unless you need 
+to utilize a special keyword or string interpolation. The reasoning for the latter is that people say it makes reading the codebase 
+easier as when they come across a sting using single quotes they know that special keywords an string interpolation isn't being used. 
 
 # What are some examples of information that would be Strings as opposed to some other data type?
 
